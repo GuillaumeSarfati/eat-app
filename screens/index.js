@@ -2,6 +2,8 @@ import { StackNavigator } from 'react-navigation';
 
 import Home from './Home';
 import Menu from './Menu';
+import Login from './Login';
+import Signup from './Signup';
 import Category from './Category';
 import Product from './Product';
 import Order from './Order';
@@ -11,9 +13,11 @@ import Delivery from './Delivery';
 export const defaultNavigator = StackNavigator({
   Home: { screen: Home, path: '/Home' },
   Menu: { screen: Menu, path: '/Menu' },
+  Login: { screen: Login, path: '/Login' },
+  Signup: { screen: Signup, path: '/Signup' },
   Category: { screen: Category, path: '/Category' },
 }, {
-  initialRouteName: 'Home',
+  initialRouteName: 'Login',
   cardStyle: {
     shadowColor: 'transparent',
   },
