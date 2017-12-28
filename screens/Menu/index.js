@@ -16,9 +16,11 @@ const propTypes = {};
 const defaultProps = {};
 
 class Menu extends React.Component {
-  componentWillMount() {
+
+  componentDidMount() {
     this.props.categoriesEffects.find();
   }
+
   render() {
     return (
       <View style={style.screen}>
@@ -46,7 +48,7 @@ class Menu extends React.Component {
 
 export default connect(
   state => ({
-    categories: state.categories
+    categories: state.categories,
   }),
   dispatch => ({
     categoriesEffects: bindActionCreators(CategoriesEffects, dispatch),
